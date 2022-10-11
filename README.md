@@ -2,7 +2,7 @@
  
 ## Description
 
-The purpose of this project is to create a README using node js
+The purpose of this project is to create a professional README using node
 
 ## License
 
@@ -11,4 +11,4 @@ The project was built with [![License](https://img.shields.io/badge/License-EPL_
 
 The URL for the project is https://github.com/laceyaguigam/Professional-README-Generator
 
-I am the only one who  contributed to this project
+I was the only one who contributed to this project
