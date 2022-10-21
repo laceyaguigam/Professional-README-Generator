@@ -76,11 +76,11 @@ function init() {
             licenseBadge = '[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)'
         
 
-        const template = `# The title of my project is ${answers.name}
+        const template = `# ${answers.name}
  
 ## Description
 
-The purpose of this project is ${answers.purpose}
+ ${answers.purpose}
 
 ##Table of Contents
 
@@ -90,6 +90,18 @@ The purpose of this project is ${answers.purpose}
 - Contributions
 - Questions
 
+## Usage
+
+## Installation
+
+##Test 
+
+## Contribution
+
+## Questions 
+
+For questions you may reach me at ${url} and at ${email}.
+
 
 ## License
 
@@ -97,6 +109,7 @@ The project was built with ${licenseBadge}
 
 ## Installation
 
+${instructions}
 
 The URL for the project is ${answers.url}
 
@@ -135,15 +148,10 @@ THEN a high-quality, professional README.md is generated with
 WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
 THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
 
-WHEN I choose a license for my application from a list of options
-THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
 
 
-WHEN I enter my GitHub username
-THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
 
-WHEN I enter my email address
-THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
 
-WHEN I click on the links in the Table of Contents
-THEN I am taken to the corresponding section of the README
+
+
+
