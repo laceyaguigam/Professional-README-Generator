@@ -82,9 +82,20 @@ function init() {
 
 The purpose of this project is ${answers.purpose}
 
+##Table of Contents
+
+- Usage
+- Installation
+- Test
+- Contributions
+- Questions
+
+
 ## License
 
 The project was built with ${licenseBadge} 
+
+## Installation
 
 
 The URL for the project is ${answers.url}
