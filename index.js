@@ -1,18 +1,18 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-const path = require("path")
+
 
 // TODO: Create an array of questions for user input
 const questions = [
     {
         message: "What is the title of your project?",
-        name: "name",
+        name: "title",
         type: "input"   
     },
     {
         message: "Please give a description of project?",
-        name: "purpose",
+        name: "description",
         type: "input"   
     },
     {
@@ -76,11 +76,11 @@ function init() {
             licenseBadge = '[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)'
         
 
-        const template = `# ${answers.name}
+        const template = `# ${answers.title}
  
 ## Description
 
- ${answers.purpose}
+ ${answers.description}
 
 ##Table of Contents
 
@@ -92,28 +92,31 @@ function init() {
 
 ## Usage
 
+${answers.repo}
+
 ## Installation
+
+${answers.installation}
+
+The project was built with ${answers.licenseBadge} 
+
 
 ##Test 
 
-## Contribution
+The URL for the project is ${answers.url}
+
+
+## Contribution Guidelines
+
+${answers.contributed} contributed to this project`
 
 ## Questions 
 
 For questions you may reach me at ${url} and at ${email}.
 
 
-## License
-
-The project was built with ${licenseBadge} 
-
-## Installation
 
 ${instructions}
-
-The URL for the project is ${answers.url}
-
-${answers.contributed} contributed to this project`
 
         console.log(template)
         writeToFile("README.md", template)
@@ -129,24 +132,16 @@ init();
 
 
 
-The generated Readme is missing a table of contents, a badge, and an email. 
-It also does not include all the required sections.
+//The generated Readme is missing a table of contents, a badge, and an email. 
+//It also does not include all the required sections.
 
-The Readme does not include a link to the walkthrough video. 
-Commit often using descriptive messages of your code. 
-Make sure that node_modules is not included in your repo. 
-
-
+//The Readme does not include a link to the walkthrough video. 
+//Commit often using descriptive messages of your code. 
+//Make sure that node_modules is not included in your repo. 
 
 
-WHEN I am prompted for information about my application repository
-THEN a high-quality, professional README.md is generated with 
- Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-
-
-
-WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
-THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
+//WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
+//THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
 
 
 
